@@ -1,0 +1,3 @@
+[console_scripts]
+bdsim_path = RVC3.bin.bdsim_path:main
+rvctool = RVC3.bin.rvctool:main

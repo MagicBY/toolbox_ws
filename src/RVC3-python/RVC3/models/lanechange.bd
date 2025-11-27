@@ -1,0 +1,202 @@
+{
+    "id": 140289492570800,
+    "created_by": "corkep",
+    "creation_time": 1627594455,
+    "scene_width": 7168.000000000001,
+    "scene_height": 4026.4000000000005,
+    "blocks": [
+        {
+            "id": 140611883007616,
+            "block_type": "PIECEWISE",
+            "title": "Steering command",
+            "pos_x": -340.0,
+            "pos_y": -40.0,
+            "width": 100,
+            "height": 100,
+            "flipped": false,
+            "inputsNum": 0,
+            "outputsNum": 1,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 140611883058656,
+                    "index": 0,
+                    "multi_wire": true,
+                    "position": 3,
+                    "socket_type": 2
+                }
+            ],
+            "parameters": [
+                [
+                    "seq",
+                    [
+                        [0,0],
+                        [3, 0.5],
+                        [4,0], 
+                        [5,-0.5], 
+                        [6,0]
+                    ]
+                ]
+            ]
+        },
+        {
+            "id": 140611883097008,
+            "block_type": "CONSTANT",
+            "title": "Speed",
+            "pos_x": -340.0,
+            "pos_y": -180.0,
+            "width": 100,
+            "height": 100,
+            "flipped": false,
+            "inputsNum": 0,
+            "outputsNum": 1,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 140611883097200,
+                    "index": 0,
+                    "multi_wire": true,
+                    "position": 3,
+                    "socket_type": 2
+                }
+            ],
+            "parameters": [
+                [
+                    "value",
+                    1
+                ]
+            ]
+        },
+        {
+            "id": 140611883291696,
+            "block_type": "BICYCLE",
+            "title": "Bicycle model",
+            "pos_x": -100.0,
+            "pos_y": -140.0,
+            "width": 100,
+            "height": 100,
+            "flipped": false,
+            "inputsNum": 2,
+            "outputsNum": 1,
+            "inputs": [
+                {
+                    "id": 140611883291744,
+                    "index": 0,
+                    "multi_wire": true,
+                    "position": 1,
+                    "socket_type": 1
+                },
+                {
+                    "id": 140611883291888,
+                    "index": 1,
+                    "multi_wire": true,
+                    "position": 1,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 140611883291792,
+                    "index": 0,
+                    "multi_wire": true,
+                    "position": 3,
+                    "socket_type": 2
+                }
+            ],
+            "parameters": [
+                [
+                    "x0",
+                    "None"
+                ],
+                [
+                    "L",
+                    1.0
+                ],
+                [
+                    "vlim",
+                    1.0
+                ],
+                [
+                    "slim",
+                    1.0
+                ],
+                [
+                    "x0",
+                    null
+                ]
+            ]
+        },
+        {
+            "id": 140289557476640,
+            "block_type": "VEHICLEPLOT",
+            "title": "Vehicle path",
+            "pos_x": 60.0,
+            "pos_y": -140.0,
+            "width": 100,
+            "height": 100,
+            "flipped": false,
+            "inputsNum": 1,
+            "outputsNum": 0,
+            "inputs": [
+                {
+                    "id": 140289557476784,
+                    "index": 0,
+                    "multi_wire": true,
+                    "position": 1,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [],
+            "parameters": [
+                [
+                    "animation",
+                    null
+                ],
+                [
+                    "path",
+                    null
+                ],
+                [
+                    "labels",
+                    [
+                        "X",
+                        "Y"
+                    ]
+                ],
+                [
+                    "square",
+                    false
+                ],
+                [
+                    "scale",
+                    [0, 10, -5, 5]
+                ],
+                [
+                    "init",
+                    null
+                ]
+            ]
+        }
+    ],
+    "wires": [
+        {
+            "id": 140611883293376,
+            "start_socket": 140611883097200,
+            "end_socket": 140611883291744,
+            "wire_type": 3
+        },
+        {
+            "id": 140611883293424,
+            "start_socket": 140611883058656,
+            "end_socket": 140611883291888,
+            "wire_type": 3
+        },
+        {
+            "id": 140289555293856,
+            "start_socket": 140611883291792,
+            "end_socket": 140289557476784,
+            "wire_type": 3
+        }
+    ],
+    "labels": []
+}
