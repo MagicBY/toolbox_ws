@@ -82,7 +82,7 @@ ur3 = rtb.models.UR3()
 
 # Initial and final configurations (exactly the ones you asked for)
 q_start = np.array([0, -np.pi/2, np.pi/2, -np.pi/2, -np.pi/2, 0])
-q_goal  = np.array([0, -1.40, 0.95, 0.64, -0.41, 0.42])
+q_goal  = np.array([0.7854, -1.0472, 1.3963, -1.5708, 0.8727, 2.0944])
 
 ur3.q = q_start.copy()
 env.add(ur3)
